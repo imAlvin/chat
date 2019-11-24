@@ -50,7 +50,7 @@ public class Server {
      */
     private void init() throws IOException {
         //初始化群发工作线程、客户端列表、消息队列
-        ExecutorService service = Executors.newFixedThreadPool(1);
+        ExecutorService service = Executors.newSingleThreadExecutor();
         clients = new LinkedList<>();
         msgQueue = new LinkedTransferQueue<>();
 
